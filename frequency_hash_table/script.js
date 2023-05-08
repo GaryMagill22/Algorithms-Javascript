@@ -40,4 +40,17 @@ function makeFrequencyTable(arr) {
 }
 
 console.log(makeFrequencyTable(arr3))
+
+// using method built in to javascript
+
+function makeFrequencyTable(arr) {
+    var occurances = {};
+    for (var i = 0; i < arr.length; i++) {
+        if (occurances.hasOwnProperty(arr[i])) {
+            occurances[arr[i]]++;
+        } else {
+            occurances[arr[i]] = 1;
+        }
+    } return occurances;
+}
 /*****************************************************************************/
